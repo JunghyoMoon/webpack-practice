@@ -1,0 +1,9 @@
+{
+  "name": "webpack-practice",
+  "version": "1.0.0",
+  "description": "practice webpack real quick.. with simple responsive project",
+  "main": "index.js",
+  "author": "junghyo moon",
+  "license": "MIT",
+  "private": true
+}

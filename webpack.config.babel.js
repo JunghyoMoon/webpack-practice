@@ -9,7 +9,20 @@ export default {
 		path: path.resolve(__dirname, "build/js"),
 	},
 	module: {
-		rules: [],
+		rules: [
+			{
+				test: /\.js$/,
+				use: [{ loader: "babel-loader" }],
+			},
+			{
+				test: /\.(scss|sass)$/,
+				use: [
+					{ loader: "style-loader" },
+					{ loader: "css-loader" },
+					{ loader: "sass-loader" },
+				],
+			},
+		],
 	},
 	plugins: [],
 };

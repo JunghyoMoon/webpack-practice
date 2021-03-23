@@ -1,12 +1,15 @@
 import webpack from "webpack";
 import path from "path";
 
+const ENTRY_POINT = path.resolve(__dirname, "src", "js", "main.js");
+const OUTPUT_POINT = path.resolve(__dirname, "build");
+
 export default {
 	mode: "none",
-	entry: "./src/js/main.js",
+	entry: [ENTRY_POINT],
 	output: {
-		filename: "main.js",
-		path: path.resolve(__dirname, "build/js"),
+		path: OUTPUT_POINT,
+		filename: "app.bundle.js",
 	},
 	module: {
 		rules: [
